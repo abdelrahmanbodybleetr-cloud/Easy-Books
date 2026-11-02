@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتبتي الرقمية</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --muted-text: #94a3b8;
+            --accent-color: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 30px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: var(--muted-text);
+            font-size: 1rem;
+        }
+
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .book-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #334155;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            border-color: var(--accent-color);
+        }
+
+        .book-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-bottom: 1px solid #334155;
+        }
+
+        .book-info {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .book-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .book-desc {
+            font-size: 0.85rem;
+            color: var(--muted-text);
+            line-height: 1.5;
+            margin-bottom: 16px;
+            flex-grow: 1;
+        }
+
+        .read-btn {
+            display: block;
+            text-align: center;
+            background-color: var(--accent-color);
+            color: #0f172a;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 8px;
+            transition: opacity 0.15s;
+        }
+
+        .read-btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>📚 المكتبة الرقمية</h1>
+        <p>اختر أي كتاب واضغط عليه للدخول والقراءة المباشرة</p>
+    </header>
+
+    <div class="books-grid">
+
+        <!-- كتاب 1 -->
+        <div class="book-card">
+            <a href="books/mobile_legends_bang_bang.html">
+                <img src="covers/mlbb-cover.jpg" alt="غلاف موسوعة MLBB">
+            </a>
+            <div class="book-info">
+                <h2 class="book-title">موسوعة MLBB الشاملة</h2>
+                <p class="book-desc">دليل كامل لجميع المعدات والشعارات والمواهب مع الحسابات الرياضية واستراتيجيات اللعب.</p>
+                <a href="books/mobile_legends_bang_bang.html" class="read-btn">اقرأ الآن</a>
+            </div>
+        </div>
+
+        <!-- كتاب 2 (مثال يمكنك تكراره) -->
+        <div class="book-card">
+            <a href="books/english-guide.html">
+                <img src="covers/english-cover.jpg" alt="غلاف دليل الإنجليزية">
+            </a>
+            <div class="book-info">
+                <h2 class="book-title">موسوعة تعلم الإنجليزية</h2>
+                <p class="book-desc">استراتيجيات دراسية ومناهج متكاملة لاكتساب مهارات اللغة الإنجليزية ذاتياً.</p>
+                <a href="books/english-guide.html" class="read-btn">اقرأ الآن</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
